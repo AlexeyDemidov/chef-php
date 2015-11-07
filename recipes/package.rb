@@ -27,9 +27,9 @@ end
 include_recipe 'apt' if platform_family?('debian')
 
 # Make sure the Apt cache is updated
-if platform_family?('debian')
-  resources(:execute => 'apt-get update').run_action(:run)
-end
+#if platform_family?('debian')
+#  resources(:execute => 'apt-get update').run_action(:run)
+#end
 
 # Run the package installation at compile time
 node['php']['packages'].each do |pkg|

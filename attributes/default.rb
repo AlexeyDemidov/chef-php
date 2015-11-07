@@ -22,6 +22,7 @@
 
 lib_dir = kernel['machine'] =~ /x86_64/ ? 'lib64' : 'lib'
 
+default['apt']['compile_time_update'] = true
 default['php']['directives'] = {}
 
 case node['platform_family']

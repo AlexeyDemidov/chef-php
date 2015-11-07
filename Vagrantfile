@@ -18,18 +18,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-  
+
 Vagrant.configure('2') do |config|
 
   config.berkshelf.enabled = true
-  config.ssh.max_tries = 40
-  config.ssh.timeout   = 120
+#  config.ssh.max_tries = 40
+#  config.ssh.timeout   = 120
 
   config.vm.provider :virtualbox do |v|
     v.gui = true
   end
 
-  config.vm.box = 'ubuntu'
+  # config.vm.box = 'bento/debian-7.8-i386'
+  config.vm.box = 'wheezy-lxc'
   config.vm.hostname = 'php'
   config.vm.network :private_network, ip: '172.16.6.2'
 
