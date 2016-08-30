@@ -81,3 +81,11 @@ default['php']['ini_settings'] = {
 
 default['php']['tmpfs'] = true
 default['php']['tmpfs_size'] = '128M'
+
+default['php']['session_handler'] = 'files'
+
+default['php']['opcache'] = {
+  'memory_consumption' => '64',
+  'max_accelerated_files' => '2000',
+  'internetd_strings_buffer' => '8'
+}
