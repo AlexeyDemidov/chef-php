@@ -76,7 +76,8 @@ default['php']['ini_settings'] = {
   'cgi.fix_pathinfo' => '1',
   'upload_max_filesize' => '32M',
   'date.timezone' => 'UTC',
-  'session.cookie_httponly' => '0'
+  'session.cookie_httponly' => '0',
+  'session.cookie_secure' => '0'
 }
 
 default['php']['tmpfs'] = true
