@@ -21,6 +21,12 @@
 
 include_recipe 'php::package'
 
+if node['php']['http_proxy']
+  execute 'set proxy' do
+    command "pear config-set http_proxy #{node['php']['http_proxy']}"
+  end
+end
+
 # update the main channels
 php_pear_channel 'pear.php.net' do
   action :update
